@@ -13,7 +13,7 @@ Route::view('/formulario','formulario')->name('rutaFormulario');
 
 Route::view('/clientes','clientes')->name('rutaClientes');
 
-
+Route::view('/componentes','componentes')->name('rutaComponentes');
 
 
 Route::get('/dashboard', function () {
