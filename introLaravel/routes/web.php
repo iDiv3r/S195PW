@@ -1,19 +1,32 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\controladorVistas;
 use Illuminate\Support\Facades\Route;
+
+
+Route::get('/',[controladorVistas::class,'home'])->name('rutaBienvenida');
+
+Route::get('/formulario',[controladorVistas::class,'formulario'])->name('rutaFormulario');
+
+Route::get('/clientes',[controladorVistas::class,'consulta'])->name('rutaClientes');
+
+Route::view('/componentes','componentes')->name('rutaComponentes');
+
+
+
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
-Route::view('/','bienvenida')->name('rutaBienvenida');
+// Route::view('/','bienvenida')->name('rutaBienvenida');
 
-Route::view('/formulario','formulario')->name('rutaFormulario');
+// Route::view('/formulario','formulario')->name('rutaFormulario');
 
-Route::view('/clientes','clientes')->name('rutaClientes');
+// Route::view('/clientes','clientes')->name('rutaClientes');
 
-Route::view('/componentes','componentes')->name('rutaComponentes');
+
 
 
 Route::get('/dashboard', function () {
