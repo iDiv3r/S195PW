@@ -12,28 +12,30 @@
                     Formulario
                 </div>
 
-                <form action="">
+                <form action="{{ route('procesarCliente') }}" method="POST">
+
+                    @csrf
 
                     <div class="card-body mb-3">
     
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="txtNombre">
                         </div>
                         
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Apellido</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="txtApellido">
                         </div>
     
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Correo</label>
-                            <input type="mail" class="form-control" id="exampleFormControlInput1" placeholder="">
+                            <input type="mail" class="form-control" id="exampleFormControlInput1" placeholder="" name="txtCorreo">
                         </div>
     
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="txtTelefono">
                         </div>
     
                     </div>

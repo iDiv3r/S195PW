@@ -13,6 +13,7 @@ Route::get('/clientes',[controladorVistas::class,'consulta'])->name('rutaCliente
 
 Route::view('/componentes','componentes')->name('rutaComponentes');
 
+Route::post('/enviar',[controladorVistas::class,'procesarCliente'])->name('procesarCliente');
 
 
 
@@ -32,6 +33,8 @@ Route::view('/componentes','componentes')->name('rutaComponentes');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
