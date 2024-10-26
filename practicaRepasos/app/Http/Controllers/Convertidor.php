@@ -33,7 +33,7 @@ class Convertidor extends Controller
         }    
 
         return view('repaso1',[
-            'resultado'=>$resultado,
+            'resultado1'=>$resultado,
             'opcion'=>$o
         ]);
     }

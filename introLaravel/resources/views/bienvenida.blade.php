@@ -10,11 +10,13 @@
 </head>
 <body>
 
-    @foreach ($datos as $dato)
+    @if (isset($datos))
+        @foreach ($datos as $dato)
 
-    <span>{{    $dato}}</span>
+        <span>{{    $dato}}</span>
 
-    @endforeach
+        @endforeach
+    @endif
 
     <div class="h-100">
         <div class="flex text-center mt-5 position-absolute top-50 start-50 translate-middle">

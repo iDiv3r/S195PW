@@ -8,16 +8,16 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    <div class="container text center w-100 ">
+    <div class="ps-5 flex row justify-content-center text-center w-100 ">
         <h1 class="mt-5">Calculadora de Bytes</h1>
 
-        <div class="col-3 row mt-5">
+        <div class="container col-3 row mt-5">
 
             <form action="{{ route('rutaGMB') }}" method="POST">
 
-                @if (isset($resultado))
+                @if (isset($resultado1))
 
-                    <span class="mb-3 fw-bold">El resultado es {{ $resultado}} @if ($opcion == 1) GB @elseif($opcion == 2) MB @endif </span>
+                    <span class="mb-3 fw-bold">El resultado es {{ $resultado1}} @if ($opcion == 1) GB @elseif($opcion == 2) MB @endif </span>
 
                 @endif
 
@@ -32,7 +32,7 @@
                 
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="inputGroup-sizing-default">GigaBytes</span>
-                    <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="GB1">
+                    <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="gb1">
                 </div>
     
                 <select class="form-select" aria-label="Default select example" name="opcion1">
@@ -62,7 +62,7 @@
 
                 <div class="input-group mb-3 mt-2">
                     <span class="input-group-text" id="inputGroup-sizing-default">GigaBytes</span>
-                    <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="GB2">
+                    <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="gb2">
                 </div>
                 
                 
