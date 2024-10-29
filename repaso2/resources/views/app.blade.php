@@ -13,7 +13,7 @@
 
 </head>
 
-<body class="mb-5" >
+<body>
     
     <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom border-4 border-danger ">
         <div class="container-fluid">
@@ -44,9 +44,9 @@
 </body>
 
     <!-- Footer -->
-<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+<footer class="text-center text-lg-start bg-body-tertiary text-muted mt-5">
     <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    {{-- <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         
         <!-- Right -->
         <div>
@@ -70,10 +70,10 @@
             </a>
         </div>
     <!-- Right -->
-    </section>
+    </section> --}}
     <!-- Section: Social media -->
 
-    <!-- Section: Links  -->
+    {{-- <!-- Section: Links  -->
     <section class="">
         <div class="container text-center text-md-start mt-5">
             <!-- Grid row -->
@@ -150,7 +150,7 @@
             <!-- Grid row -->
         </div>
     </section>
-    <!-- Section: Links  -->
+    <!-- Section: Links  --> --}}
 
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
