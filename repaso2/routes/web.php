@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('inicio');
+// });
 
-Route::view('/prueba','prueba');
+Route::view('/registro','registro')->name('rRegistro');
+
+Route::view('/','inicio')->name('rInicio');
