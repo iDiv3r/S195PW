@@ -21,10 +21,10 @@
     <div class="h-100">
         <div class="flex text-center mt-5 position-absolute top-50 start-50 translate-middle">
             <div class="container" >
-                <span class="fs-1">Bienvenido a Turista sin maps</span>
+                <span class="fs-1">{{__('Bienvenido a Turista sin maps')}}</span>
                 <br>
-                <p>Presiona el botón para iniciar</p>
-                <a href="{{ route('rutaFormulario') }}" class="btn btn-primary"> Ir al registro</a>
+                <p>{{__('Presiona el botón para iniciar')}}</p>
+                <a href="{{ route('rutaFormulario') }}" class="btn btn-primary"> {{__('Ir al registro')}}</a>
                 {{-- <a href="/formulario" class="btn btn-primary"> Ir al registro</a> --}}
             </div>
         </div>

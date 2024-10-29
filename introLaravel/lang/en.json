@@ -91,6 +91,11 @@
     "Apellido":"Last Name",
     "Correo":"E-Mail",
     "Teléfono": "Phone",
-    "Consultar Clientes":"Customer List"
+    "Consultar Clientes":"Customer List",
+    "Actualizar":"Update",
+    "Eliminar":"Delete",
+    "Bienvenido a Turista sin maps":"Welcome to Turista Sin Maps",
+    "Presiona el botón para iniciar":"Press the button to start",
+    "Ir al registro":"Go to register"
 
 }
