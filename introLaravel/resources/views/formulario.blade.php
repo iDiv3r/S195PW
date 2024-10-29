@@ -38,7 +38,7 @@
         <div class="container col-3">
             <div class="card text-center">
                 <div class="card-header">
-                    Formulario
+                    {{ __('Registro de clientes') }}
                 </div>
 
                 <form action="{{ route('procesarCliente') }}" method="POST">
@@ -49,7 +49,7 @@
                         
 
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                            <label for="exampleFormControlInput1" class="form-label">{{ __('Nombre') }} </label>
                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="txtNombre">
                             <strong class="text-danger my-2 fst-italic">
                                 {{ $errors->first('txtNombre') }}
@@ -57,7 +57,7 @@
                         </div>
                         
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Apellido</label>
+                            <label for="exampleFormControlInput1" class="form-label">{{ __('Apellido') }} </label>
                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="txtApellido">
                             <strong class="text-danger my-2 fst-italic">
                                 {{ $errors->first('txtApellido') }}
@@ -65,7 +65,7 @@
                         </div>
     
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Correo</label>
+                            <label for="exampleFormControlInput1" class="form-label">{{ __('Correo') }} </label>
                             <input type="mail" class="form-control" id="exampleFormControlInput1" placeholder="" name="txtCorreo">
                             <strong class="text-danger my-2 fst-italic">
                                 {{ $errors->first('txtCorreo') }}
@@ -73,7 +73,7 @@
                         </div>
     
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
+                            <label for="exampleFormControlInput1" class="form-label">{{ __('Teléfono') }} </label>
                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="txtTelefono">
                             <strong class="text-danger my-2 fst-italic">
                                 {{ $errors->first('txtTelefono') }}
@@ -83,7 +83,7 @@
                     </div>
     
                     <div class="card-footer text-body-secondary">
-                        <button class="btn btn-success" type="submit"> Enviar</button>
+                        <button class="btn btn-success" type="submit"> {{ __('Guardar Cliente') }}</button>
                     </div>
                 </form>
 
