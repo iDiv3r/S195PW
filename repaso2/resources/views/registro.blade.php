@@ -4,6 +4,16 @@
 
 @section('content')
 
+
+    @session('exito')
+
+        <script>
+            alertify.alert('Éxito','{{ $value  }}');
+        </script>   
+        
+        <span>{{ $value }}</span>
+    @endsession
+
     <div class="container mt-5 w-50">
         <div class="">
             <form action="{{ route('regL') }}" method="POST">
@@ -62,6 +72,7 @@
                 
                 <button type="submit" class="btn btn-outline-info my-3">Enviar</button>
             </form>
+            
         </div>
     </div>
 
