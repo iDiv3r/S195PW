@@ -6,12 +6,16 @@
 
 
     @session('exito')
-        <script> 
+        {{-- <script> 
                 Swal.fire({
                     title: "¡Éxito!",
                     text: "{{ $value }}",
                     icon: "success"
                     });
+        </script> --}}
+
+        <script>
+            alertify.alert('Éxito', '{{ $value }}');
         </script>
     @endsession
 
