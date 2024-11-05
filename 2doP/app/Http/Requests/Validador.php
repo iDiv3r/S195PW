@@ -20,11 +20,11 @@ class Validador extends FormRequest
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
     public function rules(): array
-    {
+    {   
         return [
-            'nombre'=>'required',
-            'sabor'=>'required',
-            'peso'=>'required',
+            'nombre'=>'required|string',
+            'sabor'=>'required|string',
+            'peso'=>'required|numeric',
         ];
     }
 }

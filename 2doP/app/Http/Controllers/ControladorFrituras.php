@@ -10,19 +10,13 @@ class ControladorFrituras extends Controller
         
     public function abrirFormulario(Validador $request){
 
-        // $nombre = $request->input('nombre');
-        // $sabor = $request->input('sabor');
-        // $peso = $request->input('peso');
 
-        session()->flash('exito','asd');
+        session()->flash('exito', $request->nombre);
 
-        return view('formFrituras',[
-            'nom'=>$request->input('nombre'),
-            'sab'=>$request->input('sabor'),
-            'pe'=>$request->input('peso'),
-        ]); 
-
-        // dump($request->input());
+        
+        return to_route('rutaInicio');
+        
+    
     }
 
 
