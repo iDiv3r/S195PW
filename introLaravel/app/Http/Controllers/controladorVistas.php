@@ -23,15 +23,13 @@ class controladorVistas extends Controller
 
     public function procesarCliente(ValidadorCliente $peticion) {
 
-        $id = [
-            ['Usuario1'=>1],
-            ['Usuario2'=>2]
-        ];
+        // $id = [
+        //     ['Usuario1'=>1],
+        //     ['Usuario2'=>2]
+        // ];
 
         $usuario = $peticion->input('txtNombre');
         
-
-
         session()->flash('exito','Se guardó el usuario ' . $usuario);
 
         return to_route('rutaFormulario');
@@ -40,6 +38,10 @@ class controladorVistas extends Controller
 
 
 
+
+
+
+        
         // return view('formulario', compact('id'));
 
 
