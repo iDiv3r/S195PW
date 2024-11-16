@@ -50,7 +50,7 @@
 
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">{{ __('Nombre') }} </label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="txtNombre">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="txtNombre" value={{ old('txtNombre') }}>
                             <strong class="text-danger my-2 fst-italic">
                                 {{ $errors->first('txtNombre') }}
                             </strong>
@@ -58,7 +58,7 @@
                         
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">{{ __('Apellido') }} </label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="txtApellido">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="txtApellido" value={{ old('txtApellido') }}>
                             <strong class="text-danger my-2 fst-italic">
                                 {{ $errors->first('txtApellido') }}
                             </strong>
@@ -66,7 +66,7 @@
     
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">{{ __('Correo') }} </label>
-                            <input type="mail" class="form-control" id="exampleFormControlInput1" placeholder="" name="txtCorreo">
+                            <input type="mail" class="form-control" id="exampleFormControlInput1" placeholder="" name="txtCorreo" value={{ old('txtCorreo') }}>
                             <strong class="text-danger my-2 fst-italic">
                                 {{ $errors->first('txtCorreo') }}
                             </strong>
@@ -74,7 +74,7 @@
     
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">{{ __('Teléfono') }} </label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="txtTelefono">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="txtTelefono" value={{ old('txtTelefono') }}>
                             <strong class="text-danger my-2 fst-italic">
                                 {{ $errors->first('txtTelefono') }}
                             </strong>

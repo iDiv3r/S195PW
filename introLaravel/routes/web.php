@@ -2,18 +2,28 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\controladorVistas;
+use App\Http\Controllers\clienteController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/',[controladorVistas::class,'home'])->name('rutaBienvenida');
+# Rutas de controladorVistas 
 
-Route::get('/formulario',[controladorVistas::class,'formulario'])->name('rutaFormulario');
-
-Route::get('/clientes',[controladorVistas::class,'consulta'])->name('rutaClientes');
 
 Route::view('/componentes','componentes')->name('rutaComponentes');
 
-Route::post('/enviar',[controladorVistas::class,'procesarCliente'])->name('procesarCliente');
+
+
+
+# Rutas de cliente Controller
+
+Route::get('/clientes/create',[clienteController::class,'create'])->name('rutaFormulario');
+
+Route::post('/enviar',[clienteController::class,'store'])->name('procesarCliente');
+
+Route::get('/clientes',[clienteController::class,'index'])->name('rutaClientes');
+
+Route::get('/',[clienteController::class,'home'])->name('rutaBienvenida');
+
 
 
 

@@ -8,9 +8,7 @@ use App\Http\Requests\ValidadorCliente;
 
 class controladorVistas extends Controller
 {
-    public function home(){
-        return view('bienvenida');
-    }
+
 
     public function formulario(){
         return view('formulario');
@@ -20,6 +18,7 @@ class controladorVistas extends Controller
         return view('clientes');
         
     }
+
 
     public function procesarCliente(ValidadorCliente $peticion) {
 
