@@ -73,22 +73,49 @@ class clienteController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(ValidadorCliente $request)
     {
-        //
+        DB::table('clientes')
+            ->where('id',$request->input('idCliente'))
+            ->update([
+                'nombre'=>$request->input('txtNombre' . $request->input('idCliente')),
+                'apellido'=>$request->input('txtApellido' . $request->input('idCliente')),
+                'correo'=>$request->input('txtCorreo' . $request->input('idCliente')),
+                'telefono'=>$request->input('txtTelefono' . $request->input('idCliente')),
+                'updated_at'=>Carbon::now()
+            ])
+        ;
+        
+        $usuario = $request->input('txtNombre' . $request->input('idCliente'));
+        
+        session()->flash('exito','El usuario ' . $usuario . ' se actualizó con éxito.' );
+        
+        return to_route('rutaClientes');
+
+        // dd($request->post());
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    
+    public function destroy(Request $request)
     {
-        //
+        DB::table('clientes')
+            ->where('id',$request->input('idCliente'))
+            ->delete();
+        ;
+
+        $usuario = $request->input('nomCliente');
+        
+        session()->flash('exito','El usuario ' . $usuario . ' se eliminó con éxito.' );
+
+        return to_route('rutaClientes');
     }
 }

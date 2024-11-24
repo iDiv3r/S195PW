@@ -24,6 +24,9 @@ Route::get('/clientes',[clienteController::class,'index'])->name('rutaClientes')
 
 Route::get('/',[clienteController::class,'home'])->name('rutaBienvenida');
 
+Route::post('/updateCliente',[clienteController::class,'update'])->name('rutaUpdateCliente');
+
+Route::post('/deleteCliente',[clienteController::class,'destroy'])->name('rutaDeleteCliente');
 
 
 

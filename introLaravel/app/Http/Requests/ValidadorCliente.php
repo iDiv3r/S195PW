@@ -9,6 +9,7 @@ class ValidadorCliente extends FormRequest
     /**
      * Determine if the user is authorized to make this request.
      */
+
     public function authorize(): bool
     {
         return true;
@@ -19,13 +20,14 @@ class ValidadorCliente extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
+
     public function rules(): array
     {
         return [
-            'txtNombre'=>'required|min:3|max:20',
-            'txtApellido'=>'required',
-            'txtTelefono'=>'required',
-            'txtCorreo'=>'required|email',
+            ('txtNombre' . $this->input('idCliente'))=>'required|min:3',
+            ('txtApellido' . $this->input('idCliente'))=>'required|min:3',
+            ('txtTelefono' . $this->input('idCliente'))=>'required|integer',
+            ('txtCorreo' . $this->input('idCliente'))=>'required|email',
         ];
 
     }
